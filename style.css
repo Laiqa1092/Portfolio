@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Navigation */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #333;
+    padding: 20px 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+nav .logo h1 {
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 60px;
+}
+
+nav ul li a:hover {
+    color: rgb(59, 102, 102);
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background-color:rgb(143, 160, 131);
+    display: flex;
+    align-items: left;
+    justify-content:left;
+    color: #fff;
+    text-align:left;
+}
+
+.hero-section img{
+   
+    width: 400px;
+    border-radius: 150px 150px 0px 0px;
+    height: 600px ;
+    clip-path: circle();
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    margin-left: 0px;
+    margin-top: 50px;
+    margin-right: 100px;
+}
+
+.hero-section h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 200px;
+    margin-left: 120px;
+}
+
+.hero-section h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    margin-left: 120px;
+}
+
+.btn {
+    padding: 10px 30px;
+    background-color:rgb(59, 102, 102);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 55px;
+    transition: background-color 0.3s ease;
+    margin-left: 120px;
+    transition: padding-top 1s,
+    padding-bottom 1s,
+    padding-left 1s,
+    padding-right 1s;
+    margin-right: 4px;
+   
+}
+
+.btn:hover {
+    
+    background-color:rgb(97, 94, 87);
+    text-decoration: underline;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+    /* border:  1px solid; */
+    border-radius: 30px;
+   
+}
+
+/* About Section */
+.about-section {
+    padding: 80px 0;
+    background-color: rgb(230, 230, 206);
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about-section .about-content {
+    width: 700px;
+    margin: 0 auto;
+}
+
+.about-section p {
+    font-size: 20px;
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 80px 0;
+    background-color: white;
+    text-align: center;
+}
+
+.projects-section h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    width: 700px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(13, 13, 13, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+   
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-image {
+    height: 200px;
+    background-size:cover;
+    background-position: center;
+
+}
+
+.project-info {
+    padding: 20px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.project-info h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 0;
+    background-color:rgb(143, 160, 131);
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.btn-1 {
+    padding: 10px 30px;
+    background-color:rgb(59, 102, 102);
+    color: #fff;
+    /* text-decoration: none; */
+    border-radius: 25px;
+    font-weight: 55px;
+    transition: background-color 0.3s ease;
+    transition: padding-top 1s,
+    padding-bottom 1s,
+    padding-left 1s,
+    padding-right 1s;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.btn-1:hover {
+    background-color:rgb(97, 94, 87);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+    /* border:  1px solid; */
+    border-radius: 30px;
+}
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .projects-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+}
